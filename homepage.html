@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="./element.webp">
+  <title>Tainted Star - Official Homepage</title>
+</head>
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 0;
+      background-color: #000;
+      color: white;
+      padding-top: 80px;
+    }
+
+    .navbar {
+      background-color: #000;
+      color: white;
+      padding: 1.5em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 80px;
+    }
+
+    .navbar a {
+      margin: 0 1em;
+      color: white;
+      text-decoration: none;
+    }
+
+    .navbar .center a {
+      padding: 0.5em 1em;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar .center a {
+      padding: 0.5em 1em;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .navbar .center a:hover {
+      background-color: white;
+      color: black;
+      border-color: white;
+    }
+
+    .navbar .right a {
+      background-color: white;
+      color: black;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .right a:hover {
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+    }
+
+   a.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #c86fdb;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+    height: 100%;
+     line-height: 1;
+   }
+
+
+    a.logo:hover {
+      color: #9919bd;
+    }
+
+    .header-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .header-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .available-bar {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 0.5em 0;
+      margin-top: -4px;
+    }
+
+    .available-bar img {
+      height: 40px;
+      vertical-align: middle;
+      margin-left: 0.5em;
+    }
+
+    .section {
+      padding: 4em 2em;
+      text-align: center;
+    }
+
+    .section.dark {
+      background-color: #111;
+    }
+
+    .section.light {
+      background-color: #222;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #c86fdb;
+    }
+
+    .features, .news {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    .card {
+      background-color: #000;
+      border: 2px solid #c86fdb;
+      padding: 1em;
+      width: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      height: auto;
+    }
+
+    .footer {
+      background-color: #000;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .footer img {
+      margin: 1em;
+      height: 50px;
+    }
+
+    .play-now-btn {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .play-now-btn:hover {
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo">Tainted Star</a>
+    <div class="center">
+      <a href="index.html">Homepage</a>
+      <a href="information.html">Information</a>
+      <a href="gallery.html">Photo gallery</a>
+      <a href="news.html">News</a>
+    </div>
+    <div class="right">
+      <a href="https://store.steampowered.com/" target="_blank">Play Now</a>
+    </div>
+  </div>
+
+  <div class="header-image-wrapper">
+    <img src="https://placehold.co/1920x1080" alt="Game Splash" />
+  </div>
+
+  <div class="available-bar">
+    <strong>Available For</strong>
+    <a href="https://store.steampowered.com/" target="_blank">
+      <img src="steam.png" alt="Steam" />
+    </a>
+  </div>
+
+  <div class="section dark" id="info">
+    <h2>An open World Exploration Game</h2>
+    <p>
+      Tainted Star is a world exploration game, where you walk, explore the forest, venture across valleys and climb the highest mountains for an unforgettable experience. 
+      An amazing sound design and the stunning visuals guarantee this game to be next on your wish list.
+    </p>
+    <a href="https://store.steampowered.com/" target="_blank" class="play-now-btn">Play Now</a>
+  </div>
+
+  <div class="section light">
+    <h2>Features of the Game</h2>
+    <div class="features">
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="Huge world" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">Explore a huge world</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">Immersive Open World</small>
+        <p style="color: #ddd; font-size: 0.95em; line-height: 1.6; margin: 0;">
+          Explore the magnificent outdoors by boat, off-road vehicle, or on foot. Discover turquoise springs, majestic mountain peaks, hidden ponds, and charming outposts in your search for the perfect fishing spot.
+        </p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="Unique experience" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">A unique experience</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">Diverse Biomes</small>
+        <p style="color: #ddd; font-size: 0.95em; line-height: 1.6; margin: 0;">
+          Take on a variety of unique biome types in a unique and immersive experience. Each biome has its own appearance and characteristics that influence its environment.
+        </p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="Master Explorer" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">Become a Master Explorer</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">Character Progression</small>
+        <p style="color: #ddd; font-size: 0.95em; line-height: 1.6; margin: 0;">
+          Create your own character and complete various missions. Buy clothes and craft your own explorations.
+        </p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="Play with friends" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">Play alone or with friends</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">Multiplayer Mode</small>
+        <p style="color: #ddd; font-size: 0.95em; line-height: 1.6; margin: 0;">
+          Join an unprecedented exploration experience and play online in co-op mode for up to 10 players. Meet new Survivors and explore the open world together or alone.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section dark">
+    <h2>Latest News</h2>
+    <div class="news">
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="Patch Notes" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">Patch Notes - April 3rd, 2025</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">April 03, 2025</small>
+        <p style="color: #eeeeee; font-size: 0.95em; line-height: 1.6; margin: 0;">Improved AI behavior, new lighting system, and updates to vehicle handling. Full patch notes available in-game.</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="New Buildings soon" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">New Buildings soon</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">April 06, 2025</small>
+        <p style="color: #eeeeee; font-size: 0.95em; line-height: 1.6; margin: 0;">New structures for player housing and trade hubs. Discover architectural styles across different biomes.</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/250x150" alt="Map changes coming" />
+        <h3 style="margin: 1em 0 0.4em; color: white; font-size: 1.4em;">Map changes coming</h3>
+        <small style="display: block; margin-bottom: 1em; color: #ccc; font-size: 0.9em;">April 09, 2025</small>
+        <p style="color: #eeeeee; font-size: 0.95em; line-height: 1.6; margin: 0;">Enhanced visuals, rebalanced spawn zones, and new region transitions are on the way in this map overhaul update.</p>
+      </div>
+    </div>
+  </div>  
+
+  <div class="footer">
+    <a href="#" class="logo">Tainted Star</a>
+    <p>Flobsy Productions. All Rights Reserved</p>
+    <img src="" alt="" />
+    <img src="" alt="" />
+    <img src="" alt="" />
+  </div>
+
+  
+
+</body>
+</html>

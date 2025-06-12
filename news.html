@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="icon" type="image/x-icon" href="./element.webp">
+  <title>Tainted Star - News site</title>
+</head>
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      cursor: default;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 0;
+      background-color: #000000;
+      color: #ffffff;
+      padding-top: 80px;
+    }
+
+    a {
+      color: #ffffff
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .navbar .center,
+    .navbar .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 80px;
+    }
+
+    .navbar a {
+      margin: 0 1em;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .navbar .center a {
+      margin: 0 1em;
+      padding: 0.5em 1em;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .center a:hover {
+      background-color: #000000;
+      color: #ffffff;
+      border-color: #c86fdb;
+    }
+
+    .navbar .right a {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .right a:hover {
+      background-color: #000000;
+      color: #ffffff;
+      border: 2px solid #c86fdb;
+    }
+
+
+    a.logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #c86fdb;
+      text-decoration: line-through 5px #000000;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      line-height: 1;
+    }
+
+    a.logo:hover {
+      color: #9919bd;
+    }
+
+    .play-now-btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #000000;
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .play-now-btn:hover {
+      background-color: #000000;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+    }
+
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #000000;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .mobile-menu .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 0.5em 1em;
+      border-radius: 10px;
+      border: 2px solid transparent;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #000000;
+      border-color: #c86fdb;
+      color: #ffffff;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+
+    .footer {
+      background-color: #000000;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .footer img {
+      margin: 1em;
+      height: 50px;
+    }
+
+    @media (max-width: 1050px) {
+
+      .navbar .center,
+      .navbar .right {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    .news-section {
+      padding: 4em 2em;
+      background-color: #000000;
+      text-align: center;
+    }
+
+    .news-section h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+
+    .news-section h2 {
+      font-size: 2;
+      margin-bottom: 0.3em;
+      color: #c86fdb;
+    }
+
+    .news-section p {
+      font-size: 1.1em;
+      margin-bottom: 2em;
+      color: #cccccc;
+    }
+
+    .news-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    .news-card {
+      background-color: #000000;
+      border: 2px solid #c86fdb;
+      padding: 1em;
+      width: 600px;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+
+    .news-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+    }
+
+    .news-card h3 {
+      color: #ffffff;
+      margin: 1em 0 0.5em;
+    }
+
+    .news-card small {
+      color: #cccccc;
+      margin-bottom: 1em;
+    }
+
+    .news-card p {
+      color: #ffffff;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html" class="logo">Tainted Star</a>
+    <div class="center">
+      <a href="index.html">Homepage</a>
+      <a href="information.html">Information</a>
+      <a href="gallery.html">Photo gallery</a>
+      <a href="news.html">News</a>
+    </div>
+    <div class="right">
+      <a href="https://store.steampowered.com/" target="_blank">Play Now</a>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <div class="menu-links">
+      <a href="index.html">Homepage</a>
+      <a href="information.html">Information</a>
+      <a href="gallery.html">Photo gallery</a>
+      <a href="news.html">News</a>
+      <a href="https://store.steampowered.com/" target="_blank" class="play-now-btn">Play Now</a>
+    </div>
+  </div>
+
+  <div class="news-section">
+    <h2>News & Updates</h2>
+    <p>Here you can see all Important News and Updates</p>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="output 5.jpg" alt="Patch Notes">
+        <h3>Expected Release Date - Juli 3rd, 2025</h3>
+        <small>Juni 11, 2025</small>
+        <p>If everything works as planned, we will release Tainted Star on Juli 3rd (07.03.2025)</p>
+      </div>
+      <div class="news-card">
+        <img src="questionmark.webp" alt="New Buildings soon">
+        <h3>No Updates yet...</h3>
+        <small>January 01, 2025</small>
+        <p>No Updates yet...</p>
+      </div>
+      <div class="news-card">
+        <img src="questionmark.webp" alt="Map changes coming">
+        <h3>No Updates yet...</h3>
+        <small>January 01, 2025</small>
+        <p>No Updates yet...</p>
+      </div>
+      <div class="news-card">
+        <img src="questionmark.webp" alt="Patch Notes">
+        <h3>No Updates yet...</h3>
+        <small>January 01, 2025</small>
+        <p>No Updates yet...</p>
+      </div>
+      <div class="news-card">
+        <img src="questionmark.webp" alt="New Buildings soon">
+        <h3>No Updates yet...</h3>
+        <small>January 01, 2025</small>
+        <p>No Updates yet...</p>
+      </div>
+      <div class="news-card">
+        <img src="questionmark.webp" alt="Map changes coming">
+        <h3>No Updates yet...</h3>
+        <small>January 01, 2025</small>
+        <p>No Updates yet...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="#" class="logo">Tainted Star</a>
+    <p>© 2025 by Flobsy. All Rights Reserved.</p>
+    <img src="" alt="" />
+    <img src="" alt="" />
+    <img src="" alt="" />
+  </div>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const closeBtn = document.getElementById("closeBtn");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.style.display = "none";
+    });
+  </script>
+
+</body>
+
+</html>

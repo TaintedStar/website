@@ -1,0 +1,256 @@
+  a {
+      color: white
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 0;
+      background-color: #242424;
+      color: white;
+      padding-top: 80px;
+    }
+
+    .navbar {
+      background-color: #242424;
+      color: white;
+      padding: 1.5em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 80px;
+    }
+
+    a.logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #c86fdb;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      line-height: 1;
+    }
+
+    a.logo:hover {
+      color: #9919bd;
+    }
+
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #242424;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .mobile-menu .menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      border: 2px solid transparent;
+    }
+
+    .mobile-menu a:hover {
+      background-color: #242424;
+      border-color: white;
+      color: white;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    .navbar .center,
+    .navbar .right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .center a {
+      margin: 0 1em;
+      padding: 0.5em 1em;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .center a:hover {
+      background-color: #242424;
+      border-color: white;
+    }
+
+    .navbar .right a {
+      background-color: white;
+      color: black;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .navbar .right a:hover {
+      background-color: #242424;
+      color: white;
+      border: 2px solid white;
+    }
+
+    @media (max-width: 960px) {
+
+      .navbar .center,
+      .navbar .right {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    .header-image-wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .header-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .available-bar {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 0.5em 0;
+      margin-top: -4px;
+    }
+
+    .available-bar img {
+      height: 40px;
+      vertical-align: middle;
+      margin-left: 0.5em;
+    }
+
+    .section {
+      padding: 4em 2em;
+      text-align: center;
+    }
+
+    .section.dark {
+      background-color: #000;
+    }
+
+    .section.light {
+      background-color: #242424;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      color: #c86fdb;
+    }
+
+    .features,
+    .news {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    .card {
+      background-color: #000;
+      border: 2px solid #c86fdb;
+      padding: 1em;
+      width: 250px;
+      color: white;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      height: auto;
+    }
+
+    .card h3 {
+      color: white;
+    }
+
+    .card small {
+      color: #aaa;
+    }
+
+    .card p {
+      color: white;
+    }
+
+    .footer {
+      background-color: #000;
+      padding: 2em;
+      text-align: center;
+    }
+
+    .footer img {
+      margin: 1em;
+      height: 50px;
+    }
+
+    .play-now-btn {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .play-now-btn:hover {
+      background-color: black;
+      color: white;
+      border: 2px solid white;
+    }
